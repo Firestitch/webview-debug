@@ -28,6 +28,8 @@ public class WebViewDebug extends CordovaPlugin
      */
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
+	
+	WebView.setWebContentsDebuggingEnabled(true);
         
         Log.v(TAG, "Checking SDK Version: " + Build.VERSION.SDK_INT);
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
